@@ -18,9 +18,15 @@ const IterationSample = () => {
       text: inputText,
     });
     setNextId(nextId + 1); // nextId 값에 1을 더해 준다.
+    setNames(nextNames) // names 값을 업데이트 한다.
+    setInputText('') // inputText 값을 바꾼다.
   };
+  const onRemove = id => {
+    const nextNames = names.filter(name => name.id !== id)
+    setNames(nextNames)
+  }
 
-  const nameList = names.map((name) => <li key={name.id}>{name.text}</li>);
+  const nameList = names.map((name) => <li key={name.id} onDoubleClick={() => onRemove(name.id)}>{name.text}</li>);
   // index라는 고유 번호 사용
   return (
     <>
