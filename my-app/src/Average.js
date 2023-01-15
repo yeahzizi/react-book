@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback } from 'react'
+import React, { useState, useMemo, useCallback, useRef } from 'react'
 
 const getAverage = numbers => {
   console.log('평균 값 계산 중..')
@@ -10,6 +10,7 @@ const getAverage = numbers => {
 const Average = () => {
   const [list, setList] = useState([])
   const [number, setNumber] = useState('')
+  const inputEl = useRef(null)
 
   const onChange = useCallback(e => {
     setNumber(e.target.value)
@@ -19,6 +20,7 @@ const Average = () => {
     const nextList = list.concat(parseInt(number))
     setList(nextList)
     setNumber('')
+    inputEl.current.focus()
   }, [number, list] ) 
   //number 혹은 list가 바뀌었을 때만 함수 생성 > 이 때만 새로 만들어진 함수 사용
   // 함수가 number와 list 에 의존하므로 꼭 값이 있어야 함

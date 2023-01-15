@@ -1,11 +1,11 @@
 import React from "react"
 // import EventPractice from "./EventPractice";
-import Average from "./Average";
+import Info from "./Info";
 // import MyComponent from "./MyComponent";
 // import Say from "./Say";
 
 const App = () => {
-  return <Average/>
+  return <Info/>
 };
 
 export default App;
