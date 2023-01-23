@@ -538,15 +538,17 @@ export default EventPractice;
 ### map() 함수 사용
 
 - 문법
+
   - arr.map(callback, [thisArg])
   - callback: 새로운 배열의 요소를 생성하는 함수로 파라미터는 아래 세 가지다.
     - currentValue: 현재 처리하고 있는 요소
     - index: 현재 처리하고 있는 요소의 index 값
     - array: 현재 처리하고 있는 원본 배열
   - thisArg(선택 항목): callback 함수 내부에서 사용할 this 레퍼런스
-  ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/62315464-6ac7-408d-88e2-0b5a44d516e4/Untitled.png)
-  ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e39869d4-9ac2-4db9-bcf5-a9369b22aff0/Untitled.png)
-  ES6 문법
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/62315464-6ac7-408d-88e2-0b5a44d516e4/Untitled.png)
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e39869d4-9ac2-4db9-bcf5-a9369b22aff0/Untitled.png)
+    ES6 문법
+
   ```jsx
   import React from "react";
 
@@ -558,7 +560,9 @@ export default EventPractice;
 
   export default IterationSample;
   ```
+
   ### key
+
   - 컴포넌트 배열을 렌더링 했을 때 어떤 원소에 변동이 있었는지 알아내려고 사용
   - key 값을 설정할 때는 함수 내부에서 컴포넌트 props를 설정하듯이 설정하면 됨
 
@@ -657,7 +661,9 @@ export default IterationSample;
   불변성을 유지 해야 나중에 리액트 컴포넌트의 성능을 최적화 할 수 있다.
 
   - 데이터 제거 기능 구현하기
+
     - 특정 항목을 지울 때는 배열의 내장 함수 filter을 사용한다.
+
     ```jsx
     const numbers = [1, 2, 3, 4, 5, 6];
     const biggerThanThree = numbers.filter((number) => number > 3);
@@ -764,7 +770,9 @@ push 함수는 기존 배열 자체를 변경해주는 반면, concat 은 새로
 불변성을 유지 해야 나중에 리액트 컴포넌트의 성능을 최적화 할 수 있다.
 
 - 데이터 제거 기능 구현하기
+
   - 특정 항목을 지울 때는 배열의 내장 함수 filter을 사용한다.
+
   ```jsx
   const numbers = [1, 2, 3, 4, 5, 6];
   const biggerThanThree = numbers.filter((number) => number > 3);
@@ -888,7 +896,7 @@ export default Info;
 
 - 리액트 **컴포넌트가 렌더링 될 때마다 특정 작업을 수행**하도록 설정할 수 있는 Hook
   - 마운트 될 때만 실행하고 싶을 때
-  > 맨 처음 렌더링 될 때만 실행하고, 업데이트 될 때는 실행하지 않으려면 함수의 두 번째 파라미터로 비어 있는 배열을 넣어준다.
+    > 맨 처음 렌더링 될 때만 실행하고, 업데이트 될 때는 실행하지 않으려면 함수의 두 번째 파라미터로 비어 있는 배열을 넣어준다.
 
 ```jsx
 useEffect(() => {
@@ -908,7 +916,7 @@ useEffect(() => {
 
 - 컴포넌트가 **언마운트 되기 전이나 업데이트 되기 직전에 어떠한 작업을 수행하고 싶다면 useEffect에서 뒷정리 함수를 반환**해야 한다.
   - 뒷정리 함수가 호출될 때는 업데이트 되기 직전의 값을 보여준다.
-  > 오직 언마운트 될 때만 뒷정리 함수를 호출하고 싶다면 useEffect 함수의 두 번째 파라미터에 비어 있는 배열을 넣으면 된다.
+    > 오직 언마운트 될 때만 뒷정리 함수를 호출하고 싶다면 useEffect 함수의 두 번째 파라미터에 비어 있는 배열을 넣으면 된다.
 
 ```jsx
 import React, { useState, useEffect } from 'react'
@@ -1389,8 +1397,10 @@ export default App;
 ```
 
 - Link 컴포넌트를 사용하여 다른 주소로 이동
+
   - a태그를 사용하면 안됨 > 페이지를 새로 불러오기 때문에
   - Like 컴포넌트를 사용하여 전환하면, 페이지를 새로 불러오지 않고 app을 그대로 유지
+
   ```jsx
   import "./App.css";
   import React from "react";
@@ -1603,7 +1613,9 @@ export default App;
 ### 리액트 라우터 부가 기능
 
 - history
+
   - 특정 버튼을 눌렀을 때 뒤로 가거나, 로그인 후 화면을 전환하거나, 다른 페이지로 이탈하는 것을 방지해야 할 때 history 활용
+
   ```jsx
   import React, { Component } from "react";
 
@@ -1639,6 +1651,7 @@ export default App;
 
   export default HistorySample;
   ```
+
   ```jsx
   // import logo from './logo.svg';
   import "./App.css";
@@ -1685,6 +1698,7 @@ export default App;
 
   export default App;
   ```
+
 - withRouter
   - HoC, 라우트로 사용된 컴포넌트가 아니어도 match, location, history 객체를 접근할 수 있게 해줌
 
@@ -1716,8 +1730,10 @@ export default withRouter(WithRouterSample);
 ```
 
 - Switch
+
   - 여러 Route를 감싸서 그 중 일치하는 단 하나의 라우트만을 렌더링
   - 이걸 사용하면 Not Found 페이지도 구현할 수 있음
+
   ```jsx
   // import logo from './logo.svg';
   import "./App.css";
@@ -1774,6 +1790,7 @@ export default withRouter(WithRouterSample);
 
   export default App;
   ```
+
 - NavLink
   - 현재 경로와 Link에서 사용하는 경로가 일치하는 경우 특정 스타일 혹은 CSS 클래스를 적용할 수 있는 컴포넌트
 
@@ -1825,3 +1842,342 @@ export default Profiles;
 ## 외부 API를 연동하여 뉴스 뷰어 만들기
 
 ### 비동기 작업의 이해
+
+- 동시에 여러 가지 요청을 처리할 수 있고, 기다리는 과정에서 다른 함수 호출 가능
+
+### 콜백 함수
+
+```jsx
+function increase(number, callback) {
+  setTimeout(() => {
+    const result = number + 10;
+    if (callback) {
+      callback(result);
+    }
+  }, 1000);
+}
+
+increase(0, (result) => {
+  console.log(result);
+});
+```
+
+하지만 콜백을 많이 쓰다보면 콜백 지옥에 빠질 수도 있다.
+
+그러면 promise 혹은 async/await를 사용하자!
+
+### async/await
+
+- 함수의 앞부분에 async 키워드를 추가하고, 해당 함수 내부에서 promise의 앞부분에 await 키워드를 사용한다.
+
+```jsx
+function increase(number) {
+  const promise = new Promise((resolve, reject) => {
+    // resolve는 성공, reject는 실패
+    setTimeout(() => {
+      const result = number + 10;
+      if (result > 50) {
+        const e = new Error("NumberTooBig");
+        return reject(e);
+      }
+      resolve(result);
+    }, 1000);
+  });
+  return promise;
+}
+
+async function runTasts() {
+  try {
+    //try/catch 구문을 사용하여 에러 처리
+    let result = await increase(0);
+    console.log(result);
+    result = await increase(result);
+    console.log(result);
+    result = await increase(result);
+    console.log(result);
+    result = await increase(result);
+    console.log(result);
+    result = await increase(result);
+    console.log(result);
+    result = await increase(result);
+    console.log(result);
+  } catch (e) {
+    console.log(e);
+  }
+}
+```
+
+## axios로 APi 호출해서 데이터 받아오기
+
+```jsx
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import NewsItem from "./NewsItem";
+import axios from "axios";
+
+const NewsListBlock = styled.div`
+  box-sizing: border-box
+  padding-bottom: 3rem
+  width: 768px
+  margin: 0 auto
+  margin-top: 2rem
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+`;
+
+const NewsList = () => {
+  const [articles, setArticles] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const response = await axios.get(
+          "https://newsapi.org/v2/top-headlines?country=kr&category=technology&apiKey=52f4c0e2265e4dd59f5e20280c4539c9"
+        );
+        setArticles(response.data.articles);
+      } catch (e) {
+        console.log(e);
+      }
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
+  if (loading) {
+    return <NewsListBlock>대기 중...</NewsListBlock>;
+  }
+  if (!articles) {
+    return null;
+  }
+  // articles 값이 유효할 때
+  return (
+    <NewsListBlock>
+      {articles.map((article) => (
+        <NewsItem key={article.url} article={article} />
+      ))}
+    </NewsListBlock>
+  );
+};
+
+export default NewsList;
+```
+
+```jsx
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import NewsItem from "./NewsItem";
+import axios from "axios";
+
+const NewsListBlock = styled.div`
+  box-sizing: border-box
+  padding-bottom: 3rem
+  width: 768px
+  margin: 0 auto
+  margin-top: 2rem
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+`;
+
+const NewsList = ({ category }) => {
+  const [articles, setArticles] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const query = category === "all" ? "" : `&category=${category}`;
+        const response = await axios.get(
+          `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=0a8c4202385d4ec1bb93b7e277b3c51f`
+        );
+        setArticles(response.data.articles);
+      } catch (e) {
+        console.log(e);
+      }
+      setLoading(false);
+    };
+    fetchData();
+  }, [category]);
+  if (loading) {
+    return <NewsListBlock>대기 중...</NewsListBlock>;
+  }
+  if (!articles) {
+    return null;
+  }
+  // articles 값이 유효할 때
+  return (
+    <NewsListBlock>
+      {articles.map((article) => (
+        <NewsItem key={article.url} article={article} />
+      ))}
+    </NewsListBlock>
+  );
+};
+
+export default NewsList;
+```
+
+## Context API
+
+### consumer 사용하기
+
+```jsx
+import React from "react";
+import ColorContext from "../contexts/color";
+
+const ColorBox = () => {
+  return (
+    <ColorContext.Consumer>
+      {(value) => (
+        <div
+          style={{
+            width: "64px",
+            height: "64px",
+            background: value.color,
+          }}
+          //render props > 컴포넌트의 children이 있어야 할 자리에 일반 JSX 혹은 함수를 전달
+        />
+      )}
+    </ColorContext.Consumer>
+  );
+};
+
+export default ColorBox;
+```
+
+- 색상을 props로 받아 오는 것이 아니라 Consumer라는 컴포넌트를 통해 색상을 조회한다.
+
+### Provider
+
+- context의 value를 변경할 수 있다.(반드시 value 값을 명시해야 한다.)
+
+```jsx
+import React from "react";
+// import { Route } from 'react-router-dom';
+// import NewsPage from './pages/NewsPage';
+import ColorBox from "./components/ColorBox";
+import ColorContext from "./contexts/color";
+
+const App = () => {
+  // return <Route path="/:category?" component={NewsPage} />;
+  <ColorContext.Provider value={{ color: "red " }}>
+    <div>
+      <ColorBox />
+    </div>
+    ;
+  </ColorContext.Provider>;
+};
+
+export default App;
+```
+
+> 할 필요 없음 바로 redux로
+
+## 리덕스 라이브러리 이해하기
+
+### 액션
+
+- 상태에 어떠한 변화가 필요하면 액션이란 것이 발생
+- 액션 객체는 type 필드를 가지고 있어야 한다.
+
+```jsx
+{
+	type: 'ADD_TODO',
+	data: {
+		id: 1,
+		text: '리덕스 배우기'
+	}
+}
+{
+	type: 'CHANGE_INPUT',
+	text: '안녕하세요'
+}
+
+```
+
+### 액션 생성 함수
+
+- 액션 객체를 만들어 주는 함수
+
+```jsx
+function addTodo(data) {
+  return {
+    type: "ADD_TODO",
+    data,
+  };
+}
+
+// 화살표 함수도 가능
+const changeInput = (text) => ({
+  type: "CHANGE_INPUT",
+  text,
+});
+```
+
+### 리듀서
+
+- 변화를 일으키는 함수
+- 액션을 만들어서 발생 > 리듀서가 현재 상태와 전달받은 액션 객체를 파라미터로 받아 옴 > 두 값으로 새로운 상태를 만들어서 반환
+
+```jsx
+const initialState = {
+  counter: 1,
+};
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case INCREMENT:
+      return {
+        counter: state.counter + 1,
+      };
+    default:
+      return state;
+  }
+}
+```
+
+### 스토어
+
+- 한 개의 프로젝트는 단 하나의 스토어만 가질 수 있음
+
+### 디스패치
+
+- 스토어의 내장 함수
+- 액션을 발생시키는 것
+- dispatch(action)과 같은 형태로 액션 객체를 파라미터로 넣어서 호출
+
+### 구독
+
+- 스토어의 내장 함수 중 하나
+- subscribe 함수 안에 리스너 함수를 파라미터로 넣어서 호출
+
+```jsx
+const listener = () => {
+  console.log("상태가 업데이트됨");
+};
+const unsubscribe = store.subscribe(listener);
+
+unsubscribe();
+```
+
+### 리덕스의 세 가지 규칙
+
+1. 단일 스토어
+
+2. 읽기 전용 상태
+
+- 불변성을 유지해야 하기 때문에
+
+3. 리듀서는 순수한 함수
+
+- 리듀서 함수는 이전 상태와 액션 객체를 파라미터를 받는다.
+- 파라미터 외의 값에는 의존하면 안됨
+- 이전 상태는 절대로 건드리지 않고, 변화를 준 새로운 상태 객체를 만들어 반환
+- 똑같은 파라미터로 호출된 리듀서 함수는 언제나 똑같은 결과 값을 반환
+- 주로 네트워크 요청과 같은 비동기 작업은 미들웨어를 통해 관리
